@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100" width="100%"
+    height="100%">
+    <defs>
+        <ref id="paramX" param="fill" default="black" />
+        <ref id="paramY" param="stroke" default="black" />
+        <ref id="paramText" param="label">Hi</ref>
+        <g id="lang">
+            <switch font-size="18">
+                <g systemLanguage="en">
+                    <text x="32" y="5" xml:lang="en-US" font-size="3">English</text>
+                    <text x="32" y="10" xml:lang="en" font-size="3">English (US)</text>
+                </g>
+                <g systemLanguage="es">
+                    <text x="32" y="5" xml:lang="es-ES" font-size="3">Castellano</text>
+                    <text x="32" y="10" xml:lang="es" font-size="3">Spanish (ES)</text>
+                </g>
+                <g systemLanguage="it">
+                    <text x="32" y="5" xml:lang="it" font-size="3">Italiano</text>
+                    <text x="32" y="10" xml:lang="it" font-size="3">Italian</text>
+                </g>
+            </switch>
+        </g>
+    </defs>
+    <g>
+        <rect id="button_rect" width="30" height="30" fill="url(#paramX)" stroke="url(#paramY)" />
+        <text id="button_label" x="15" y="25" text-anchor="middle" font-size="25" fill="white" font-family="Verdana">
+            J
+        </text>
+        <use xlink:href="#lang" />
+    </g>
+    <script type="text/ecmascript" xlink:href="https://dev.w3.org/SVG/modules/ref/master/ref2.js"></script>
+</svg>
