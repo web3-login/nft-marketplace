@@ -8,6 +8,7 @@ declare module '*.vue' {
 }
 
 declare module 'vue3-markdown-it';
+declare module 'vue-color-input';
 
 interface Window {
   ethereum: any;

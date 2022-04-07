@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import Loading from "./Loading.vue";
+import ColorSelect from "./ColorSelect.vue";
 import { useStore } from "../store";
 const store = useStore();
 
@@ -23,17 +24,20 @@ const mint = async (e: any) => {
 </script>
 
 <template>
-  <div class="card card-body">
-    <Loading v-if="loading" />
-    <form @submit="mint">
-      <div class="form-row mb-3 col-md-6">
-        <label for="num" class="form-label">Count</label>
-        <input type="number" class="form-control" v-model="num" id="num" />
-      </div>
-      <button v-if="!loading" type="submit" class="btn btn-primary mb-3">
-        Mint more Tokens
-      </button>
-    </form>
+  <div>
+    <div class="card card-body">
+      <Loading v-if="loading" />
+      <form @submit="mint">
+        <div class="form-row mb-3 col-md-6">
+          <label for="num" class="form-label">Count</label>
+          <input type="number" class="form-control" v-model="num" id="num" />
+        </div>
+        <button v-if="!loading" type="submit" class="btn btn-primary mb-3">
+          Mint more Tokens
+        </button>
+      </form>
+    </div>
+    <ColorSelect />
   </div>
 </template>
 
