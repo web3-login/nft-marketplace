@@ -109,6 +109,14 @@ module.exports = {
         ),
       network_id: "9000",
     },
+    emerald: {
+      provider: () =>
+        new HDWalletProvider(
+          MNEMONIC,
+          `wss://testnet.emerald.oasis.dev/ws`
+        ),
+      network_id: "42261",
+    },
   },
   contracts_directory: "./src/contracts/",
   contracts_build_directory: "./src/abis/",
